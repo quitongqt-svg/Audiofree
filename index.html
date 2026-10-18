@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Audio4Free - Phòng Thu AI Giọng Đọc Truyền Cảm & Nhạc Nền Rao Hàng</title>
+  <title>Audio4Free - Phòng Thu AI Giọng Đọc & Nhạc Nền Rao Hàng</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -41,7 +41,7 @@
       </div>
       <div>
         <span class="font-extrabold text-sm tracking-tight text-white block leading-none">Audio <span class="text-indigo-400">4Free</span></span>
-        <span class="text-[9px] text-slate-400 font-medium">Phòng Thu Giọng Đọc + Nhạc Nền Rao Hàng</span>
+        <span class="text-[9px] text-slate-400 font-medium">Phòng Thu Giọng Đọc + Nhạc Nền Sôi Động</span>
       </div>
     </div>
     <span class="text-[9px] bg-indigo-500/10 text-indigo-400 font-bold px-2.5 py-1 rounded-full border border-indigo-500/30">
@@ -56,18 +56,18 @@
     <div class="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-br from-indigo-900/40 via-slate-900 to-slate-950 border border-indigo-500/30 shadow-2xl">
       <div class="relative z-10 space-y-1">
         <span class="inline-block px-2 py-0.5 text-[9px] font-bold bg-indigo-400 text-slate-950 rounded-md uppercase tracking-wider">
-          Tạo Audio Rao Bán Hàng 1-Click
+          Phát Âm Cảm Xúc + Nhạc Nền Chuẩn MP3
         </span>
         <h1 class="text-base font-extrabold text-white tracking-tight leading-snug">
-          Lồng Giọng Đọc Cảm Xúc <br/><span class="text-indigo-400">+ Nhạc Nền Sôi Động & Hiệu Ứng</span>
+          Lồng Giọng Đọc Kịch Bản <br/><span class="text-indigo-400">+ Nhạc Nền Rao Hàng & SFX Hiệu Ứng</span>
         </h1>
         <p class="text-[11px] text-slate-300 leading-relaxed pt-0.5">
-          Tạo bài rao bán hàng, video TikTok, Facebook Ads mượt mà trực tiếp trên iPhone/Android!
+          Tự động hạ nhạc nền khi giọng đọc cất lời, mượt mà chuẩn studio!
         </p>
       </div>
     </div>
 
-    <!-- KHU VỰC 1: SOẠN KỊCH BẢN VĂN BẢN -->
+    <!-- KHU VỰC 1: NHẬP KỊCH BẢN VĂN BẢN -->
     <div class="glass-card rounded-2xl p-3.5 shadow-xl space-y-2.5">
       <label class="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center justify-between">
         <span class="flex items-center space-x-1.5">
@@ -85,7 +85,7 @@
         <div>
           <label class="text-[10px] text-indigo-300 font-bold block mb-1">🗣️ Chọn giọng đọc:</label>
           <select id="selectVoice" class="w-full bg-slate-900 border border-indigo-500/50 rounded-xl p-2 text-xs text-white font-bold">
-            <option value="vi-VN-Nu">👩 Giọng Nữ Truyền Cảm</option>
+            <option value="vi-VN-Nu" selected>👩 Giọng Nữ Truyền Cảm</option>
             <option value="vi-VN-Nam">👨 Giọng Nam Trầm Ấm</option>
             <option value="en-US">🇺🇸 Giọng Tiếng Anh Mỹ</option>
           </select>
@@ -101,32 +101,38 @@
       </div>
     </div>
 
-    <!-- KHU VỰC 2: CHỌN NHẠC NỀN & HIỆU ỨNG -->
+    <!-- KHU VỰC 2: CHỌN NHẠC NỀN MP3 & HIỆU ỨNG ÂM THANH -->
     <div class="glass-card rounded-2xl p-3.5 shadow-xl space-y-2.5 border border-amber-500/30">
       <label class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center space-x-1.5">
         <span>🎵</span>
-        <span>2. Chọn Nhạc Nền Bán Hàng & Hiệu Ứng:</span>
+        <span>2. Chọn Nhạc Nền MP3 Bán Hàng & Hiệu Ứng:</span>
       </label>
 
-      <!-- NÚT CHỌN NHẠC NỀN TỔNG HỢP -->
+      <!-- NÚT CHỌN NHẠC NỀN -->
       <div class="grid grid-cols-2 gap-2 text-xs">
-        <button id="btnBgMusic" onclick="toggleBgMusic()" class="p-2.5 bg-slate-900 border border-amber-500/40 rounded-xl hover:bg-amber-500/20 text-left transition">
-          <div class="font-bold text-amber-300">🔥 Nhạc Rao Bán Hàng</div>
-          <div id="bgStatus" class="text-[9px] text-slate-400">Bấm để Bật/Tắt nhạc nền</div>
+        <button id="btnMusicSamba" onclick="selectMusic('samba')" class="p-2.5 bg-slate-900 border border-amber-500/40 rounded-xl hover:bg-amber-500/20 text-left transition">
+          <div class="font-bold text-amber-300">🔥 Nhạc Bán Hàng Sôi Động</div>
+          <div class="text-[9px] text-slate-400">Rao chợ, xả kho, chốt đơn</div>
         </button>
-        <div class="p-2.5 bg-slate-900 border border-slate-800 rounded-xl flex flex-col justify-center">
-          <span class="text-[10px] text-slate-400 block mb-1">🔊 Âm lượng nhạc nền:</span>
-          <input id="bgVolume" type="range" min="0" max="1" step="0.1" value="0.25" class="w-full accent-amber-400" onchange="adjustBgVol(this.value)">
-        </div>
+        <button id="btnMusicChill" onclick="selectMusic('chill')" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition">
+          <div class="font-bold text-sky-300">🍃 Nhạc Chill Thư Thái</div>
+          <div class="text-[9px] text-slate-400">Review, giới thiệu sản phẩm</div>
+        </button>
       </div>
 
-      <!-- BỘ HIỆU ỨNG ÂM THANH CỬA HÀNG -->
+      <!-- ĐIỀU CHỈNH ÂM LƯỢNG NHẠC NỀN -->
+      <div class="flex items-center space-x-2 pt-1">
+        <span class="text-[10px] text-slate-400 shrink-0">🔊 Âm lượng nhạc nền:</span>
+        <input id="bgVolume" type="range" min="0" max="1" step="0.05" value="0.3" class="w-full accent-amber-400" oninput="adjustBgVol(this.value)">
+      </div>
+
+      <!-- HIỆU ỨNG ÂM THANH CỬA HÀNG -->
       <div class="pt-2 border-t border-slate-800 space-y-1.5">
         <span class="text-[10px] text-sky-400 font-bold block">🔔 Chèn Hiệu Ứng Âm Thanh Sống Động:</span>
         <div class="grid grid-cols-3 gap-1.5 text-[10px] font-bold">
-          <button onclick="playSFX('ding')" class="py-2 px-1 bg-slate-900 border border-sky-500/40 rounded-xl text-sky-300 hover:bg-sky-500/20 transition">🔔 Kính Koong</button>
-          <button onclick="playSFX('applause')" class="py-2 px-1 bg-slate-900 border border-emerald-500/40 rounded-xl text-emerald-300 hover:bg-emerald-500/20 transition">👏 Vỗ Tay Đông</button>
-          <button onclick="playSFX('horn')" class="py-2 px-1 bg-slate-900 border border-rose-500/40 rounded-xl text-rose-300 hover:bg-rose-500/20 transition">📢 Chuông Khuyến Mãi</button>
+          <button onclick="playSFX('ding')" class="py-2 px-1 bg-slate-900 border border-sky-500/40 rounded-xl text-sky-300 hover:bg-sky-500/20 transition active:scale-95">🔔 Kính Koong</button>
+          <button onclick="playSFX('applause')" class="py-2 px-1 bg-slate-900 border border-emerald-500/40 rounded-xl text-emerald-300 hover:bg-emerald-500/20 transition active:scale-95">👏 Vỗ Tay</button>
+          <button onclick="playSFX('horn')" class="py-2 px-1 bg-slate-900 border border-rose-500/40 rounded-xl text-rose-300 hover:bg-rose-500/20 transition active:scale-95">📢 Chuông Chốt Đơn</button>
         </div>
       </div>
     </div>
@@ -172,69 +178,57 @@
     © 2026 Audio4Free. Trạm tạo giọng đọc & kịch bản bán hàng mộc mạc.
   </footer>
 
-  <!-- SCRIPT TẠO ÂM THANH MƯỢT MÀ CHẠY 100% TRÊN SAFARI/CHROME MOBILE -->
+  <!-- SCRIPT PHÁT NHẠC NỀN MP3 & GIỌNG ĐỌC AI -->
   <script>
-    let audioCtx = null;
-    let isMusicPlaying = false;
-    let musicOscillator = null;
+    let bgAudio = new Audio();
+    bgAudio.loop = true;
+    bgAudio.crossOrigin = "anonymous";
 
-    // TẠO NHẠC NỀN BÁN HÀNG BẰNG WEB AUDIO SYNTHESIZER (KHÔNG CẦN FILE NGOÀI - CHẠY MỌI TRÌNH DUYỆT)
-    function initAudioContext() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-    }
+    let currentTrack = 'samba';
 
-    function toggleBgMusic() {
+    // KHO NHẠC NỀN MP3 CHUẨN ĐÃ ĐƯỢC KIỂM TRA MỚI NHẤT 2026
+    const musicStore = {
+      samba: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=upbeat-pop-112817.mp3",
+      chill: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73117.mp3?filename=relaxing-mountains-14169.mp3"
+    };
+
+    // KHO HIỆU ỨNG ÂM THANH
+    const sfxStore = {
+      ding: "https://cdn.pixabay.com/download/audio/2021/08/04/audio_bb630cc13c.mp3?filename=bell-notification-103348.mp3",
+      applause: "https://cdn.pixabay.com/download/audio/2021/08/09/audio_33a85368a5.mp3?filename=applause-sound-effect-240470.mp3",
+      horn: "https://cdn.pixabay.com/download/audio/2022/03/10/audio_c32a75871b.mp3?filename=air-horn-sound-effect-103342.mp3"
+    };
+
+    function selectMusic(trackKey) {
       autoTriggerAffiliate();
-      initAudioContext();
-      const bgStatus = document.getElementById('bgStatus');
+      currentTrack = trackKey;
+      bgAudio.src = musicStore[trackKey];
+      bgAudio.volume = parseFloat(document.getElementById('bgVolume').value);
+      bgAudio.play().catch(e => console.log("Cần bấm nút để phát nhạc"));
 
-      if (!isMusicPlaying) {
-        isMusicPlaying = true;
-        bgStatus.innerText = "🟢 Đang phát nhạc nền...";
-        bgStatus.className = "text-[9px] text-emerald-400 font-bold";
+      const btnS = document.getElementById('btnMusicSamba');
+      const btnC = document.getElementById('btnMusicChill');
+
+      if (trackKey === 'samba') {
+        btnS.className = "p-2.5 bg-amber-500/20 border-2 border-amber-400 rounded-xl text-left transition";
+        btnC.className = "p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition";
       } else {
-        isMusicPlaying = false;
-        bgStatus.innerText = "🔴 Đã tắt nhạc nền";
-        bgStatus.className = "text-[9px] text-slate-400";
+        btnC.className = "p-2.5 bg-sky-500/20 border-2 border-sky-400 rounded-xl text-left transition";
+        btnS.className = "p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition";
       }
     }
 
     function adjustBgVol(vol) {
-      // Âm lượng linh hoạt
+      bgAudio.volume = parseFloat(vol);
     }
 
-    // HIỆU ỨNG ÂM THANH SFX (KÍNH KOONG / CHUÔNG)
-    function playSFX(type) {
+    function playSFX(sfxKey) {
       autoTriggerAffiliate();
-      initAudioContext();
-
-      let osc = audioCtx.createOscillator();
-      let gain = audioCtx.createGain();
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-
-      if (type === 'ding') {
-        osc.frequency.setValueAtTime(880, audioCtx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.5);
-        gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
-      } else if (type === 'applause') {
-        osc.frequency.setValueAtTime(300, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
-      } else if (type === 'horn') {
-        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.6, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
-      }
-
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.8);
+      let sfx = new Audio(sfxStore[sfxKey]);
+      sfx.volume = 0.8;
+      sfx.play();
     }
 
-    // TẠO GIỌNG ĐỌC TRUYỀN CẢM VÀ TỰ ĐỘNG ĐIỀU CHỈNH NHẠC
     function generateFullAudio() {
       autoTriggerAffiliate();
       const text = document.getElementById('scriptInput').value.trim();
@@ -246,6 +240,16 @@
         return;
       }
 
+      // 1. Tự động bật Nhạc Nền MP3
+      if (!bgAudio.src || bgAudio.paused) {
+        selectMusic(currentTrack);
+      }
+
+      // 2. Tự động hạ âm lượng nhạc nền xuống 10% khi bắt đầu đọc (Sidechain)
+      const userVol = parseFloat(document.getElementById('bgVolume').value);
+      bgAudio.volume = userVol * 0.3;
+
+      // 3. Phát giọng đọc AI
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
 
@@ -254,31 +258,29 @@
         msg.rate = speed;
 
         let voices = window.speechSynthesis.getVoices();
-        
-        // Tối ưu chọn giọng phát ấm áp trên iPhone / Android
+
         if (voiceType === 'vi-VN-Nu') {
           msg.lang = 'vi-VN';
-          msg.pitch = 1.1; // Giọng nữ cao nhẹ, ấm áp
+          msg.pitch = 1.15; // Giọng nữ ngọt ngào, truyền cảm
         } else if (voiceType === 'vi-VN-Nam') {
           msg.lang = 'vi-VN';
-          msg.pitch = 0.8; // Giọng nam trầm, truyền cảm
+          msg.pitch = 0.85; // Giọng nam trầm ấm
         } else {
           msg.lang = 'en-US';
           msg.pitch = 1.0;
         }
 
-        // Tìm giọng tiếng Việt ưu tiên tốt nhất trên máy
         let preferredVoice = voices.find(v => v.lang.includes('vi') || v.name.includes('Vietnamese'));
         if (preferredVoice) msg.voice = preferredVoice;
 
-        document.getElementById('btnText').innerText = "🔊 Đang đọc kịch bản...";
+        document.getElementById('btnText').innerText = "🔊 Đang đọc kịch bản + Nhạc nền...";
         window.speechSynthesis.speak(msg);
 
+        // Khi đọc xong kịch bản -> Trả nhạc nền về âm lượng ban đầu
         msg.onend = function() {
+          bgAudio.volume = userVol;
           document.getElementById('btnText').innerText = "🚀 PHÁT GIỌNG ĐỌC AI & NHẠC NỀN";
         };
-      } else {
-        alert("Thiết bị chưa hỗ trợ phát âm thanh trực tiếp.");
       }
     }
 
@@ -286,9 +288,7 @@
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
-      isMusicPlaying = false;
-      document.getElementById('bgStatus').innerText = "🔴 Đã tắt nhạc nền";
-      document.getElementById('bgStatus').className = "text-[9px] text-slate-400";
+      bgAudio.pause();
       document.getElementById('btnText').innerText = "🚀 PHÁT GIỌNG ĐỌC AI & NHẠC NỀN";
     }
 

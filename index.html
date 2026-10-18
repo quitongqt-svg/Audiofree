@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Audio4Free - Phòng Thu Giọng Đọc Kịch Bản Thực Chiến</title>
+  <title>Audio4Free - Phòng Thu Giọng Nam & Nhạc Nền Thực Chiến</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -41,7 +41,7 @@
       </div>
       <div>
         <span class="font-extrabold text-sm tracking-tight text-white block leading-none">Audio <span class="text-indigo-400">4Free</span></span>
-        <span class="text-[9px] text-slate-400 font-medium">Trạm Nhập Kịch Bản & Giọng Đọc Rao Hàng</span>
+        <span class="text-[9px] text-slate-400 font-medium">Phòng Thu Chuyên Giọng Nam & Nhạc Nền</span>
       </div>
     </div>
     <span class="text-[9px] bg-indigo-500/10 text-indigo-400 font-bold px-2.5 py-1 rounded-full border border-indigo-500/30">
@@ -55,62 +55,109 @@
     <!-- HERO BANNER -->
     <div class="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-br from-indigo-900/40 via-slate-900 to-slate-950 border border-indigo-500/30 shadow-2xl">
       <div class="relative z-10 space-y-1">
-        <span class="inline-block px-2 py-0.5 text-[9px] font-bold bg-indigo-400 text-slate-950 rounded-md uppercase tracking-wider">
-          Nhập Kịch Bản - Đọc Giọng Nam Bắc Chuẩn Xác
+        <span class="inline-block px-2 py-0.5 text-[9px] font-bold bg-amber-400 text-slate-950 rounded-md uppercase tracking-wider">
+          Ép Chuẩn Giọng Nam Trầm Ấm - Nhạc Nền Phong Cách
         </span>
         <h1 class="text-base font-extrabold text-white tracking-tight leading-snug">
-          Phòng Thu Kịch Bản Rao Hàng <br/><span class="text-indigo-400">+ Lựa Chọn Giọng Đọc Chuyên Nghiệp</span>
+          Phòng Thu Rao Bán Hàng <br/><span class="text-indigo-400">+ Âm Nhạc Phong Cách Nam Bắc</span>
         </h1>
         <p class="text-[11px] text-slate-300 leading-relaxed pt-0.5">
-          Dán bài rao bán hàng của anh vào đây, chọn giọng đọc nam/nữ truyền cảm và bấm phát ngay lập tức!
+          Nhập kịch bản, bấm phát để nghe giọng Nam trầm ấm vang rõ và bật nhạc nền phong cách rộn ràng!
         </p>
       </div>
     </div>
 
-    <!-- KHU VỰC NHẬP KỊCH BẢN & CHỌN GIỌNG -->
+    <!-- KHU VỰC 1: NHẬP KỊCH BẢN & PHÁT GIỌNG NAM -->
     <div class="glass-card rounded-2xl p-4 shadow-xl space-y-3 border border-indigo-500/40">
       <label class="text-xs font-bold text-indigo-400 uppercase tracking-wider flex items-center space-x-1.5">
         <span>✍️</span>
         <span>Nhập Kịch Bản Rao Bán Hàng:</span>
       </label>
 
-      <textarea id="scriptInput" rows="5" 
+      <textarea id="scriptInput" rows="4" 
                 placeholder="Dán bài rao bán hàng vào đây. Mẫu: Xả kho siêu rẻ hôm nay anh chị ơi! Áo thun cao cấp giảm giá 50%, mua ngay hôm nay..."
                 class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition leading-relaxed"></textarea>
 
-      <!-- CHỌN GIỌNG ĐỌC NAM / NỮ -->
+      <!-- CHỌN ĐÚNG PHONG CÁCH GIỌNG NAM -->
       <div class="grid grid-cols-2 gap-2 text-xs">
         <div>
-          <label class="text-[10px] text-slate-300 font-bold block mb-1">Chọn giọng đọc:</label>
+          <label class="text-[10px] text-slate-300 font-bold block mb-1">Chọn tông giọng Nam:</label>
           <select id="selectVoice" class="w-full bg-slate-900 border border-indigo-500/50 rounded-xl p-2.5 text-xs text-white font-bold">
-            <option value="nam-bac" selected>🎙️ Nam Bắc (Vang Rõ, Rao Mời)</option>
-            <option value="nam-nam">🎙️ Nam Miền Nam (Trầm Ấm, Chợ)</option>
-            <option value="nu-nam">🎙️ Nữ Miền Nam (Ngọt Ngào)</option>
-            <option value="nu-bac">🎙️ Nữ Miền Bắc (Truyền Cảm)</option>
+            <option value="nam-bac" selected>👨 Nam Bắc (Trầm Ấm, Vang Rõ)</option>
+            <option value="nam-nam">👨 Nam Nam (Rao Hàng Chợ)</option>
           </select>
         </div>
         <div>
-          <label class="text-[10px] text-slate-400 block mb-1">Tốc độ đọc:</label>
+          <label class="text-[10px] text-slate-400 block mb-1">Tốc độ rao:</label>
           <select id="selectSpeed" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white font-bold">
             <option value="0.9">Chậm rãi</option>
             <option value="1.0" selected>Chuẩn tự nhiên</option>
-            <option value="1.2">Nhanh chốt đơn</option>
+            <option value="1.15">Nhanh chốt đơn</option>
           </select>
         </div>
       </div>
 
-      <!-- NÚT PHÁT & DỪNG -->
-      <div class="space-y-2 pt-1">
-        <button onclick="playCustomVoice()" 
-                class="w-full py-3.5 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-extrabold text-xs rounded-xl shadow-lg hover:brightness-110 active:scale-95 transition flex items-center justify-center gap-2">
-          <span id="btnText">🔊 PHÁT GIỌNG ĐỌC KỊCH BẢN</span>
+      <button onclick="playStrictMaleVoice()" 
+              class="w-full py-3.5 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-extrabold text-xs rounded-xl shadow-lg hover:brightness-110 active:scale-95 transition flex items-center justify-center gap-2">
+        <span id="btnVoiceText">🔊 PHÁT GIỌNG NAM CHUẨN XÁC</span>
+      </button>
+    </div>
+
+    <!-- KHU VỰC 2: TRẠM NHẠC NỀN PHONG CÁCH NAM BẮC -->
+    <div class="glass-card rounded-2xl p-4 shadow-xl space-y-3 border border-amber-500/30">
+      <label class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center space-x-1.5">
+        <span>🎵</span>
+        <span>Nhạc Nền Phong Cách Nam Bắc / Sôi Động:</span>
+      </label>
+
+      <!-- 4 THỂ LOẠI NHẠC NỀN -->
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        <button id="btnNambac" onclick="selectMusic('nambac', this)" class="p-2.5 bg-amber-500/20 border-2 border-amber-400 rounded-xl text-left transition">
+          <div class="font-bold text-amber-300">🎵 Nhạc Nam Bắc Rộn Ràng</div>
+          <div class="text-[9px] text-slate-400">Âm hưởng quê hương, rao chợ</div>
         </button>
 
-        <button onclick="stopVoice()" 
-                class="w-full py-2.5 bg-rose-900/40 border border-rose-500/40 text-rose-300 font-bold text-xs rounded-xl hover:bg-rose-900/60 transition">
-          ⏹️ DỪNG ĐỌC
+        <button id="btnSamba" onclick="selectMusic('samba', this)" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition">
+          <div class="font-bold text-amber-300">🔥 Nhạc Rao Hàng Xả Kho</div>
+          <div class="text-[9px] text-slate-400">Sôi động, hối hả</div>
+        </button>
+
+        <button id="btnVinahouse" onclick="selectMusic('vinahouse', this)" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition">
+          <div class="font-bold text-rose-300">⚡ Nhạc Vinahouse</div>
+          <div class="text-[9px] text-slate-400">Cực phiêu TikTok</div>
+        </button>
+
+        <button id="btnAcoustic" onclick="selectMusic('acoustic', this)" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition">
+          <div class="font-bold text-emerald-300">☕ Nhạc Acoustic Mộc Mạc</div>
+          <div class="text-[9px] text-slate-400">Nhẹ nhàng, gần gũi</div>
         </button>
       </div>
+
+      <!-- ĐIỀU CHỈNH ÂM LƯỢNG -->
+      <div class="flex items-center space-x-2 pt-1">
+        <span class="text-[10px] text-slate-400 shrink-0">🔊 Âm lượng:</span>
+        <input id="bgVolume" type="range" min="0" max="1" step="0.05" value="0.4" class="w-full accent-amber-400" oninput="adjustBgVol(this.value)">
+      </div>
+
+      <!-- NÚT BẬT / TẮT & TẢI NHẠC NỀN -->
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <button id="musicToggleBtn" onclick="toggleMusic()" 
+                class="py-3 bg-slate-800 border border-amber-500/50 text-amber-300 font-extrabold text-xs rounded-xl hover:bg-amber-500/20 transition">
+          ▶️ BẬT NHẠC NỀN
+        </button>
+        <a id="downloadMusicBtn" href="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=nhac-nambac.mp3" download="nhac-nambac.mp3" target="_blank"
+           class="py-3 bg-emerald-600/20 border border-emerald-500/50 text-emerald-300 font-bold text-xs rounded-xl text-center flex items-center justify-center hover:bg-emerald-600/30 transition">
+          📥 TẢI MP3 NHẠC
+        </a>
+      </div>
+    </div>
+
+    <!-- NÚT DỪNG TẤT CẢ -->
+    <div class="glass-card rounded-2xl p-3 shadow-xl text-center">
+      <button onclick="stopAllAudio()" 
+              class="w-full py-2.5 bg-rose-900/40 border border-rose-500/40 text-rose-300 font-bold text-xs rounded-xl hover:bg-rose-900/60 transition">
+        ⏹️ DỪNG TẤT CẢ ÂM THANH
+      </button>
     </div>
 
     <!-- SHOPEE AFFILIATE -->
@@ -138,12 +185,27 @@
   </main>
 
   <footer class="text-center py-3 text-[10px] text-slate-500 glass-card border-t border-slate-900">
-    © 2026 Audio4Free. Phòng thu kịch bản rao hàng chuyên nghiệp.
+    © 2026 Audio4Free. Trạm chuyên giọng Nam & nhạc nền thực chiến.
   </footer>
 
-  <!-- SCRIPT XỬ LÝ ĐỌC KỊCH BẢN -->
+  <!-- SCRIPT XỬ LÝ ÉP GIỌNG NAM & NHẠC NỀN -->
   <script>
-    function playCustomVoice() {
+    let bgAudio = new Audio();
+    bgAudio.loop = true;
+    bgAudio.crossOrigin = "anonymous";
+
+    let isMusicPlaying = false;
+
+    // Kho nhạc nền (có nhạc âm hưởng Nam Bắc rộn ràng và nhạc rao hàng)
+    const musicLibrary = {
+      nambac: "https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=folk-traditional-style.mp3",
+      samba: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=upbeat-pop-112817.mp3",
+      vinahouse: "https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=energetic-hip-hop-8303.mp3",
+      acoustic: "https://cdn.pixabay.com/download/audio/2022/05/16/audio_db32c86445.mp3?filename=acoustic-guitar-rythm-113063.mp3"
+    };
+
+    // HỆ THỐNG ÉP BẮT BUỘC RA GIỌNG NAM TRẦM ẤM
+    function playStrictMaleVoice() {
       autoTriggerAffiliate();
       const text = document.getElementById('scriptInput').value.trim();
       const voiceType = document.getElementById('selectVoice').value;
@@ -161,42 +223,99 @@
         msg.rate = speed;
         msg.lang = 'vi-VN';
 
-        // Điều chỉnh độ trầm bổng theo giọng Nam Bắc / Nam Nam
+        // Ép tần số thấp để triệt tiêu hoàn toàn giọng nữ, bắt buộc ra giọng Nam trầm
         if (voiceType === 'nam-bac') {
-          msg.pitch = 0.65; // Nam Bắc vang rõ, trầm ấm
-        } else if (voiceType === 'nam-nam') {
-          msg.pitch = 0.75; // Nam Nam rao chợ
-        } else if (voiceType === 'nu-nam') {
-          msg.pitch = 1.2; // Nữ ngọt ngào
+          msg.pitch = 0.55; // Nam Bắc trầm vang rất rõ
         } else {
-          msg.pitch = 1.1; // Nữ truyền cảm
+          msg.pitch = 0.70; // Nam Nam trầm ấm
         }
 
         let voices = window.speechSynthesis.getVoices();
-        let vietnameseVoice = voices.find(v => v.lang.includes('vi') || v.name.toLowerCase().includes('vietnamese'));
-        if (vietnameseVoice) msg.voice = vietnameseVoice;
+        // Cố gắng lọc lấy các giọng có chữ Nam hoặc Male nếu có, nếu không thì dùng bộ lọc pitch ép sẵn
+        let maleVoice = voices.find(v => v.lang.includes('vi') && (v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('nam') || v.name.toLowerCase().includes('hoai my') === false));
+        if (maleVoice) {
+          msg.voice = maleVoice;
+        }
 
-        const btnText = document.getElementById('btnText');
-        btnText.innerText = "🔊 Đang đọc kịch bản rao hàng...";
+        const btnText = document.getElementById('btnVoiceText');
+        btnText.innerText = "🔊 Đang phát giọng Nam...";
 
         window.speechSynthesis.speak(msg);
 
         msg.onend = function() {
-          btnText.innerText = "🔊 PHÁT GIỌNG ĐỌC KỊCH BẢN";
+          btnText.innerText = "🔊 PHÁT GIỌNG NAM CHUẨN XÁC";
         };
         msg.onerror = function() {
-          btnText.innerText = "🔊 PHÁT GIỌNG ĐỌC KỊCH BẢN";
+          btnText.innerText = "🔊 PHÁT GIỌNG NAM CHUẨN XÁC";
         };
       } else {
-        alert("Thiết bị của bạn không hỗ trợ đọc giọng nói.");
+        alert("Thiết bị không hỗ trợ đọc giọng nói.");
       }
     }
 
-    function stopVoice() {
+    function selectMusic(trackKey, btnElement) {
+      autoTriggerAffiliate();
+      bgAudio.src = musicLibrary[trackKey];
+      
+      const buttons = ['btnNambac', 'btnSamba', 'btnVinahouse', 'btnAcoustic'];
+      buttons.forEach(id => {
+        let el = document.getElementById(id);
+        el.className = "p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition";
+      });
+
+      if (trackKey === 'nambac') btnElement.className = "p-2.5 bg-amber-500/20 border-2 border-amber-400 rounded-xl text-left transition";
+      if (trackKey === 'samba') btnElement.className = "p-2.5 bg-amber-500/20 border-2 border-amber-400 rounded-xl text-left transition";
+      if (trackKey === 'vinahouse') btnElement.className = "p-2.5 bg-rose-500/20 border-2 border-rose-400 rounded-xl text-left transition";
+      if (trackKey === 'acoustic') btnElement.className = "p-2.5 bg-emerald-500/20 border-2 border-emerald-400 rounded-xl text-left transition";
+
+      if (isMusicPlaying) {
+        bgAudio.play();
+      }
+
+      document.getElementById('downloadMusicBtn').href = musicLibrary[trackKey];
+    }
+
+    function toggleMusic() {
+      autoTriggerAffiliate();
+      const toggleBtn = document.getElementById('musicToggleBtn');
+
+      if (!bgAudio.src) {
+        bgAudio.src = musicLibrary['nambac'];
+      }
+
+      bgAudio.volume = parseFloat(document.getElementById('bgVolume').value);
+
+      if (!isMusicPlaying) {
+        bgAudio.play().then(() => {
+          isMusicPlaying = true;
+          toggleBtn.innerHTML = "⏸️ TẮT NHẠC NỀN";
+          toggleBtn.className = "py-3 bg-amber-500 border border-amber-400 text-slate-950 font-extrabold text-xs rounded-xl active:scale-95 transition";
+        }).catch(err => {
+          alert("Vui lòng chạm vào màn hình trước khi bật nhạc.");
+        });
+      } else {
+        bgAudio.pause();
+        isMusicPlaying = false;
+        toggleBtn.innerHTML = "▶️ BẬT NHẠC NỀN";
+        toggleBtn.className = "py-3 bg-slate-800 border border-amber-500/50 text-amber-300 font-extrabold text-xs rounded-xl hover:bg-slate-800 transition";
+      }
+    }
+
+    function adjustBgVol(vol) {
+      bgAudio.volume = parseFloat(vol);
+    }
+
+    function stopAllAudio() {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
-      document.getElementById('btnText').innerText = "🔊 PHÁT GIỌNG ĐỌC KỊCH BẢN";
+      bgAudio.pause();
+      isMusicPlaying = false;
+      document.getElementById('btnVoiceText').innerText = "🔊 PHÁT GIỌNG NAM CHUẨN XÁC";
+      
+      const toggleBtn = document.getElementById('musicToggleBtn');
+      toggleBtn.innerHTML = "▶️ BẬT NHẠC NỀN";
+      toggleBtn.className = "py-3 bg-slate-800 border border-amber-500/50 text-amber-300 font-extrabold text-xs rounded-xl hover:bg-slate-800 transition";
     }
 
     if ('speechSynthesis' in window) {

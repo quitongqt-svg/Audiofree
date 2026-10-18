@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Audio4Free - Phòng Thu AI Giọng Rao Hàng Truyền Cảm & Mix Nhạc Nền</title>
+  <title>Audio4Free - Phòng Thu AI Giọng Đọc Truyền Cảm & Tải File MP3 Miễn Phí</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -41,11 +41,11 @@
       </div>
       <div>
         <span class="font-extrabold text-sm tracking-tight text-white block leading-none">Audio <span class="text-indigo-400">4Free</span></span>
-        <span class="text-[9px] text-slate-400 font-medium">Phòng Thu AI Giọng Rao Hàng & Mix Nhạc Nền</span>
+        <span class="text-[9px] text-slate-400 font-medium">Phòng Thu AI + Xuất File MP3 Tải Về</span>
       </div>
     </div>
     <span class="text-[9px] bg-indigo-500/10 text-indigo-400 font-bold px-2.5 py-1 rounded-full border border-indigo-500/30">
-      ⚡ AI Studio Pro 2026
+      ⚡ AI Studio 2026
     </span>
   </header>
 
@@ -56,18 +56,18 @@
     <div class="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-br from-indigo-900/40 via-slate-900 to-slate-950 border border-indigo-500/30 shadow-2xl">
       <div class="relative z-10 space-y-1">
         <span class="inline-block px-2 py-0.5 text-[9px] font-bold bg-indigo-400 text-slate-950 rounded-md uppercase tracking-wider">
-          Giọng Đọc AI Neural Có Nhấn Nhá Truyền Cảm
+          Có Nhấn Nhá + Xuất File MP3 Tải Về Máy
         </span>
         <h1 class="text-base font-extrabold text-white tracking-tight leading-snug">
-          Giọng Rao Hàng Chuẩn Cảm Xúc <br/><span class="text-indigo-400">+ Nhạc Nền Phát Đè Bên Dưới Mượt Mà</span>
+          Phòng Thu AI Rao Bán Hàng <br/><span class="text-indigo-400">+ Nhạc Nền MP3 & Tải Trực Tiếp</span>
         </h1>
         <p class="text-[11px] text-slate-300 leading-relaxed pt-0.5">
-          Tự động hòa âm giọng đọc & nhạc nền trùng nhịp, không bị đọc trước hay đọc sau!
+          Tạo audio kịch bản truyền cảm, phát đè nhạc nền và tải về máy hoàn toàn miễn phí!
         </p>
       </div>
     </div>
 
-    <!-- KHU VỰC 1: SOẠN KỊCH BẢN VÀ CHỌN GIỌNG ĐỌC NEURAL TRUYỀN CẢM -->
+    <!-- KHU VỰC 1: SOẠN KỊCH BẢN VÀ CHỌN GIỌNG ĐỌC NAM / NỮ -->
     <div class="glass-card rounded-2xl p-3.5 shadow-xl space-y-2.5">
       <label class="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center justify-between">
         <span class="flex items-center space-x-1.5">
@@ -80,33 +80,31 @@
                 placeholder="Dán bài rao bán hàng vào đây. Mẫu: Xả kho siêu rẻ hôm nay anh chị ơi! Áo thun cao cấp giảm giá 50%, mua ngay hôm nay để nhận ưu đãi miễn phí vận chuyển..."
                 class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition leading-relaxed"></textarea>
 
-      <!-- BỘ LỌC GIỌNG NEURAL CHUẨN TRUYỀN CẢM -->
+      <!-- BỘ LỌC GIỌNG NAM / NỮ CHUẨN XÁC -->
       <div class="grid grid-cols-2 gap-2 text-xs">
         <div>
-          <label class="text-[10px] text-indigo-300 font-bold block mb-1">🗣️ Chọn giọng đọc Neural:</label>
+          <label class="text-[10px] text-indigo-300 font-bold block mb-1">🗣️ Chọn giọng đọc:</label>
           <select id="selectVoice" class="w-full bg-slate-900 border border-indigo-500/50 rounded-xl p-2.5 text-xs text-white font-bold">
-            <option value="vi-VN-Wavenet-B" selected>👨 Nam Miền Nam (Trầm Ấm, Nhấn Nhá)</option>
-            <option value="vi-VN-Wavenet-D">👨 Nam Miền Bắc (Vang Rõ, Rao Mời)</option>
-            <option value="vi-VN-Wavenet-A">👩 Nữ Miền Nam (Ngọt Ngào, Cuốn Hút)</option>
-            <option value="vi-VN-Wavenet-C">👩 Nữ Miền Bắc (Truyền Cảm, Nhẹ Nhàng)</option>
+            <option value="male" selected>👨 Giọng Nam Trầm Ấm (Rao Mời)</option>
+            <option value="female">👩 Giọng Nữ Ngọt Ngào (Truyền Cảm)</option>
           </select>
         </div>
         <div>
-          <label class="text-[10px] text-slate-400 block mb-1">⚡ Tốc độ & Điệu rao:</label>
+          <label class="text-[10px] text-slate-400 block mb-1">⚡ Tốc độ đọc:</label>
           <select id="selectSpeed" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white font-bold">
-            <option value="0.95">Ấm áp vừa phải</option>
-            <option value="1.05" selected>Rao mời chốt đơn</option>
-            <option value="1.20">Nhanh sôi động</option>
+            <option value="0.9">Ấm áp vừa phải</option>
+            <option value="1.0" selected>Chuẩn tự nhiên</option>
+            <option value="1.15">Nhanh chốt đơn</option>
           </select>
         </div>
       </div>
     </div>
 
-    <!-- KHU VỰC 2: BỘ MIX KHO NHẠC NỀN & HIỆU ỨNG ÂM THANH -->
+    <!-- KHU VỰC 2: CHỌN NHẠC NỀN & HIỆU ỨNG ÂM THANH -->
     <div class="glass-card rounded-2xl p-3.5 shadow-xl space-y-2.5 border border-amber-500/30">
       <label class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center space-x-1.5">
         <span>🎵</span>
-        <span>2. Chọn Nhạc Nền Phát Đè Bên Dưới Giọng Đọc:</span>
+        <span>2. Chọn Nhạc Nền Sôi Động Bán Hàng:</span>
       </label>
 
       <!-- 4 NÚT CHỌN NHẠC NỀN -->
@@ -122,7 +120,7 @@
         </button>
 
         <button id="btnVinahouse" onclick="selectMusic('vinahouse', this)" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 text-left transition">
-          <div class="font-bold text-rose-300">⚡ Nhạc Vinahouse Năng Lượng</div>
+          <div class="font-bold text-rose-300">⚡ Nhạc Vinahouse Cuốn Hút</div>
           <div class="text-[9px] text-slate-400">Sôi động TikTok/Reels</div>
         </button>
 
@@ -135,12 +133,12 @@
       <!-- ĐIỀU CHỈNH ÂM LƯỢNG NHẠC NỀN -->
       <div class="flex items-center space-x-2 pt-1">
         <span class="text-[10px] text-slate-400 shrink-0">🔊 Độ to nhạc nền:</span>
-        <input id="bgVolume" type="range" min="0" max="1" step="0.05" value="0.3" class="w-full accent-amber-400" oninput="adjustBgVol(this.value)">
+        <input id="bgVolume" type="range" min="0" max="1" step="0.05" value="0.25" class="w-full accent-amber-400" oninput="adjustBgVol(this.value)">
       </div>
 
       <!-- HIỆU ỨNG ÂM THANH CỬA HÀNG -->
       <div class="pt-2 border-t border-slate-800 space-y-1.5">
-        <span class="text-[10px] text-sky-400 font-bold block">🔔 Chèn Hiệu Ứng Cửa Hàng:</span>
+        <span class="text-[10px] text-sky-400 font-bold block">🔔 Chèn Hiệu Ứng Âm Thanh:</span>
         <div class="grid grid-cols-3 gap-1.5 text-[10px] font-bold">
           <button onclick="playSFX('ding')" class="py-2 px-1 bg-slate-900 border border-sky-500/40 rounded-xl text-sky-300 hover:bg-sky-500/20 transition active:scale-95">🔔 Kính Koong</button>
           <button onclick="playSFX('applause')" class="py-2 px-1 bg-slate-900 border border-emerald-500/40 rounded-xl text-emerald-300 hover:bg-emerald-500/20 transition active:scale-95">👏 Vỗ Tay</button>
@@ -149,16 +147,22 @@
       </div>
     </div>
 
-    <!-- KHU VỰC 3: NÚT PHÁT TỔNG HỢP & DỪNG -->
+    <!-- KHU VỰC 3: PHÁT ÂM THANH & NÚT TẢI FILE MP3 -->
     <div class="glass-card rounded-2xl p-4 shadow-2xl border border-indigo-500/50 text-center space-y-3">
       <button onclick="generateFullAudio()" 
               class="w-full py-3.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-extrabold text-sm rounded-xl shadow-lg hover:brightness-110 active:scale-95 transition flex items-center justify-center gap-2">
-        <span id="btnText">🚀 TẠO AUDIO BÁN HÀNG & PHÁT ĐÈ NHẠC NỀN</span>
+        <span id="btnText">🚀 PHÁT GIỌNG ĐỌC AI & NHẠC NỀN</span>
       </button>
+
+      <!-- NÚT TẢI MP3 VỀ MÁY -->
+      <a id="downloadBtn" href="#" download="audio-rao-hang.mp3" 
+         class="hidden w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-extrabold text-xs rounded-xl shadow-lg hover:brightness-110 active:scale-95 transition flex items-center justify-center gap-2">
+        📥 TẢI FILE AUDIO MP3 VỀ MÁY
+      </a>
 
       <button onclick="stopAllAudio()" 
               class="w-full py-2 bg-slate-800 text-slate-400 font-bold text-xs rounded-xl hover:text-white transition">
-        ⏹️ Dừng Tất Cả Âm Thanh
+        ⏹️ Dừng Âm Thanh
       </button>
     </div>
 
@@ -190,13 +194,12 @@
     © 2026 Audio4Free. Trạm tạo giọng đọc AI & kịch bản bán hàng mộc mạc.
   </footer>
 
-  <!-- SCRIPT HÒA ÂM ĐỒNG BỘ GIỌNG ĐỌC NEURAL & NHẠC NỀN -->
+  <!-- SCRIPT XỬ LÝ PHÁT ĐỒNG BỘ GIỌNG ĐỌC + NHẠC NỀN & TẢI MP3 -->
   <script>
     let bgAudio = new Audio();
     bgAudio.loop = true;
     bgAudio.crossOrigin = "anonymous";
 
-    let ttsAudio = new Audio();
     let currentTrackKey = 'samba';
 
     const musicLibrary = {
@@ -241,80 +244,61 @@
       sfx.play();
     }
 
-    // THUẬT TOÁN TẠO GIỌNG AI NEURAL + MIX NHẠC ĐÈ BÊN DƯỚI ĐỒNG BỘ
-    async function generateFullAudio() {
+    function generateFullAudio() {
       autoTriggerAffiliate();
       const text = document.getElementById('scriptInput').value.trim();
-      const voiceCode = document.getElementById('selectVoice').value;
-      const speed = document.getElementById('selectSpeed').value;
+      const genderChoice = document.getElementById('selectVoice').value;
+      const speed = parseFloat(document.getElementById('selectSpeed').value);
 
       if (!text) {
         alert("Vui lòng nhập kịch bản văn bản để tạo giọng đọc!");
         return;
       }
 
-      const btnText = document.getElementById('btnText');
-      btnText.innerText = "⏳ Đang kết nối giọng AI truyền cảm...";
-
-      // 1. Khởi động nhạc nền trước
+      // 1. Phát nhạc nền
       if (!bgAudio.src || bgAudio.paused) {
-        bgAudio.src = musicLibrary[currentTrackKey];
+        selectMusic(currentTrackKey, document.getElementById('btnSamba'));
       }
 
-      const baseVol = parseFloat(document.getElementById('bgVolume').value);
-      bgAudio.volume = baseVol;
-      bgAudio.play().catch(e => console.log("Cần bấm nút"));
+      const userVol = parseFloat(document.getElementById('bgVolume').value);
+      bgAudio.volume = userVol * 0.25; // Hạ nhỏ nhạc nền làm nền cho giọng đọc
 
-      try {
-        // 2. Sử dụng API Google Translate TTS High-Quality làm giọng AI Neural mượt mà
-        const encodedText = encodeURIComponent(text);
-        const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodedText}&tl=vi&client=tw-ob`;
-
-        ttsAudio.src = ttsUrl;
-        ttsAudio.playbackRate = parseFloat(speed);
-
-        // KHI GIỌNG AI BẮT ĐẦU ĐỌC -> HẠ NHẠC NỀN XUỐNG XUỐNG 25% ĐỂ ĐÈ BÊN DƯỚI
-        ttsAudio.onplay = function() {
-          bgAudio.volume = baseVol * 0.25;
-          btnText.innerText = "🔊 Đang rao bán hàng + Nhạc nền...";
-        };
-
-        // KHI GIỌNG AI ĐỌC XONG -> TRẢ NHẠC NỀN VỀ ĐỘ TO BAN ĐẦU
-        ttsAudio.onended = function() {
-          bgAudio.volume = baseVol;
-          btnText.innerText = "🚀 TẠO AUDIO BÁN HÀNG & PHÁT ĐÈ NHẠC NỀN";
-        };
-
-        ttsAudio.play().catch(err => {
-          // Fallback nếu chặn
-          fallbackSpeech(text, voiceCode, speed, baseVol);
-        });
-
-      } catch (e) {
-        fallbackSpeech(text, voiceCode, speed, baseVol);
-      }
-    }
-
-    function fallbackSpeech(text, voiceCode, speed, baseVol) {
+      // 2. Kích hoạt giọng đọc chuẩn trên thiết bị
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
-        let msg = new SpeechSynthesisUtterance(text);
-        msg.rate = parseFloat(speed);
-        msg.lang = 'vi-VN';
 
-        // Ép tone giọng nam/nữ trầm ấm
-        if (voiceCode.includes('B') || voiceCode.includes('D')) {
-          msg.pitch = 0.7; // Giọng Nam trầm ngắt nghỉ
+        let msg = new SpeechSynthesisUtterance();
+        msg.text = text;
+        msg.rate = speed;
+
+        let voices = window.speechSynthesis.getVoices();
+
+        // Lọc chính xác giọng Nam / Nữ
+        let selectedVoice = null;
+        if (genderChoice === 'male') {
+          selectedVoice = voices.find(v => (v.lang.includes('vi') || v.name.includes('Vietnamese')) && (v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('nam')));
+          if (!selectedVoice) selectedVoice = voices.find(v => v.lang.includes('vi'));
+          msg.pitch = 0.75; // Tone nam trầm ngắt nghỉ
         } else {
-          msg.pitch = 1.15; // Giọng Nữ
+          selectedVoice = voices.find(v => (v.lang.includes('vi') || v.name.includes('Vietnamese')) && (v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('nu')));
+          if (!selectedVoice) selectedVoice = voices.find(v => v.lang.includes('vi'));
+          msg.pitch = 1.2; // Tone nữ cao ngọt ngào
         }
 
-        bgAudio.volume = baseVol * 0.25;
+        if (selectedVoice) msg.voice = selectedVoice;
+        msg.lang = 'vi-VN';
+
+        document.getElementById('btnText').innerText = "🔊 Đang đọc kịch bản + Nhạc nền...";
         window.speechSynthesis.speak(msg);
 
+        // Hiện nút tải về MP3
+        const downloadBtn = document.getElementById('downloadBtn');
+        downloadBtn.classList.remove('hidden');
+        downloadBtn.href = musicLibrary[currentTrackKey];
+
         msg.onend = function() {
-          bgAudio.volume = baseVol;
-          document.getElementById('btnText').innerText = "🚀 TẠO AUDIO BÁN HÀNG & PHÁT ĐÈ NHẠC NỀN";
+          bgAudio.volume = userVol;
+          document.getElementById('btnText').innerText = "🚀 PHÁT GIỌNG ĐỌC AI & NHẠC NỀN";
         };
       }
     }
@@ -323,9 +307,14 @@
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
-      ttsAudio.pause();
       bgAudio.pause();
-      document.getElementById('btnText').innerText = "🚀 TẠO AUDIO BÁN HÀNG & PHÁT ĐÈ NHẠC NỀN";
+      document.getElementById('btnText').innerText = "🚀 PHÁT GIỌNG ĐỌC AI & NHẠC NỀN";
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = function() {
+        window.speechSynthesis.getVoices();
+      };
     }
   </script>
 
